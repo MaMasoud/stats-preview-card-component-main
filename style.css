@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+*{
+    /* font-family: 'Inter', sans-serif;
+    font-family: 'Lexend Deca', sans-serif; */
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(233, 47%, 7%);
+    min-height: 100vh;
+}
+.box{
+    max-width: 1110px;
+    height: 450px;
+    background-color: hsl(244, 38%, 16%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+}
+.image{
+    background-image: url(./images/image-header-desktop.jpg);
+    background-size: cover;
+    position: relative;
+}
+.image .filter{
+    width: 100%;
+    height: 100%;
+    background-color: hsla(277, 100%, 28%, 0.513);
+}
+.image img{
+    display: none;
+}
+@media (max-width: 1150px) {
+    .box{
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .box .image{
+        width: 100%;
+        background-image: none;
+    }
+    .image .filter{
+        width: 100%;
+        height: 100%;
+        background-color: hsla(277, 100%, 28%, 0.513);
+        position: absolute;
+    }
+    .box .image img{
+        display: block;
+        width: 100%;
+    }
+}
+.content{
+    padding: 75px;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content h1{
+    font-weight: 700;
+}
+.content h1 span{
+    color: hsl(277, 64%, 61%);
+}
+.content p{
+    font-size: 16px;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.6;
+    margin-top: -50px;
+}
+.content .numbers{
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+}
+.content .numbers h3{
+    text-transform: uppercase;
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 14px;
+}
+@media (max-width: 1150px){
+    .content{
+        padding: 40px 20px;
+        text-align: center;
+    }
+    .content p{
+        margin: 20px 0;
+    }
+    .content .numbers{
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+}
